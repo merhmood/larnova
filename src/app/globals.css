@@ -1,26 +1,78 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.nav-drop-shadow {
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.fadeIn {
+  animation: fadeIn 2s 1.5s forwards;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.slideIn-1s {
+  animation: slideIn-1s 1s 0.5s forwards;
+}
+
+@keyframes slideIn-1s {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideIn-2s {
+  animation: slideIn-2s 1s 0.8s forwards;
+}
+
+@keyframes slideIn-2s {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* @pr */
+
+@media screen and (max-width: 1024px) {
+  .slide {
+    animation: slide 16s 3.5s ease-in-out forwards;
+  }
+
+  @keyframes slide {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 100% 0;
+    }
+    100% {
+      background-position: 50% 0;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mobile::-webkit-scrollbar {
+    display: none;
+  }
 }
