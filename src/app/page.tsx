@@ -52,7 +52,7 @@ export default function Home() {
         ref={containerRef}
         className={`${
           isImageLoaded ? "slide" : ""
-        } relative w-full bg-fixed bg-cover h-screen overflow-hidden`}
+        } relative w-full bg-fixed bg-cover h-[calc(100vh-9vh)] overflow-hidden`}
       >
         <div className="flex flex-col gap-4 justify-end h-full w-full absolute top-0 font-bold bg-gradient-to-b from-[#000000f5] to-[#0000000c] p-8">
           <p

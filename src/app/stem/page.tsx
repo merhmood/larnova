@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "Larnova STEM",
     description:
       "We cannot solve our problems with the same thinking we used when we created them. - Albert Einstein",
-    images: "/home-stem-bg.png",
+    images: "https://larnova.ng/images/home-stem-bg.png",
   },
 };
 
@@ -24,7 +24,7 @@ export default function Stem() {
   return (
     <div>
       <Navigation />
-      <section className="relative w-full h-screen">
+      <section className="relative w-full  h-[calc(100vh-9vh)]">
         <video
           src="/udemy-promo-video.mp4"
           autoPlay
@@ -74,10 +74,10 @@ export default function Stem() {
             <p className="text-[15px]">
               Small and medium-sized enterprises (SMEs) face the daily pressure
               of doing more with less—limited budgets, lean teams, and fierce
-              competition. That’s where AI tools like ChatGPT come in. These
-              tools can supercharge productivity, automate repetitive tasks, and
-              help businesses punch above their weight—without hiring extra
-              hands.
+              competition. That&apos;s where AI tools like ChatGPT come in.
+              These tools can supercharge productivity, automate repetitive
+              tasks, and help businesses punch above their weight—without hiring
+              extra hands.
             </p>
           </div>
           <div className="flex flex-wrap pt-10 pl-4 lg:p-10 basis-10/12">
@@ -126,7 +126,7 @@ export default function Stem() {
               </p>
               <p className="mt-2 lg:mt-5 opacity-65">
                 Dive into the world of software development and build the skills
-                that power today’s digital world? Join our{" "}
+                that power today&apos;s digital world? Join our{" "}
                 <span className="font-bold">
                   Software Development Engineering Training
                 </span>
