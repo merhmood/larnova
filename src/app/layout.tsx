@@ -28,7 +28,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fustat.className} antialiased`}>{children}</body>
+      <body className={`${fustat.className} antialiased`}>
+        <div id="modal"></div>
+        {children}
+      </body>
     </html>
   );
 }

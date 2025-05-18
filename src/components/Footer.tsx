@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="mt-20 lg:mt-36 pt-10 lg:pt-16 pb-20 border-t border-gray-200">
+    <footer className="mt-20 lg:mt-36 pt-10 lg:pt-16 pb-20 border-t border-gray-200 list-none">
       <div className="w-11/12 mx-auto lg:flex lg:justify-between">
         <div className="mb-10 lg:mb-0">
           <div className="flex items-center">
@@ -86,7 +86,9 @@ function Footer() {
             <p>Careers</p>
             <p>For Investors</p>
             <p>Legal</p>
-            <p>Contact</p>
+            <Link href="/contact">
+              <li>Contact</li>
+            </Link>
           </div>
         </div>
       </div>

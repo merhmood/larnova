@@ -1,48 +1,115 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import Modal from "./Modal";
+
+const NAVIGATIONS = [
+  { name: "Home", link: "/" },
+  { name: "Lab", link: "/lab" },
+  { name: "STEM", link: "/stem" },
+  { name: "Contact", link: "/contact" },
+];
 
 const Navigation = () => {
-  const pathName = usePathname();
-  useEffect(() => {
-    console.log(pathName);
-  });
+  const currentPath = usePathname();
+
+  const setActive = (href: string) => href === currentPath;
   return (
-    <div className={`sticky top-0 left-0 w-full z-30 border-b border-gray-200`}>
-      <div className="flex mx-auto backdrop-blur-xs bg-white text-center justify-between items-center px-4 py-3 lg:py-4 lg:px-8">
-        <Link href="/">
-          <h3 className="flex justify-center items-end font-bold text-xl lg:text-3xl hover:text-black cursor-pointer">
-            <span className="relative w-8 h-8 lg:w-10 lg:h-10 mr-1">
-              <Image
-                src="/logo-metadata.png"
-                fill
-                alt="logo"
-                objectFit="contain"
-              />
-            </span>
-            Larnova
-          </h3>
-        </Link>
-        <ul className="lg:mt-0 flex justify-center lg:justify-start items-center gap-4 lg:gap-8 text">
-          <li className="hidden lg:block hover:text-black cursor-pointer">
-            Home
-          </li>
-          <Link href="/lab">
-            <li className="hover:text-black cursor-pointer">Lab</li>
-          </Link>
-          <Link href="/stem">
-            <li className="hover:text-black cursor-pointer">STEM</li>
-          </Link>
-          <li className="hidden lg:block hover:text-black cursor-pointer">
-            Contact
-          </li>
-        </ul>
-      </div>
+    <div className="sticky top-0 z-30 bg-white border-b border-gray-200">
+      <DesktopNav setActive={setActive} />
+      <MobileNav />
     </div>
   );
 };
 
 export default Navigation;
+
+const MobileNav = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  useEffect(() => {
+    // Enable scrolling between page changes
+    const body = document.querySelector("body");
+    body?.removeAttribute("style");
+  });
+
+  return (
+    <div className={` lg:hidden w-full z-30`}>
+      <div>
+        {" "}
+        <div className="flex w-full items-center justify-between py-4">
+          <div className="w-11/12">
+            <Link href="/">
+              <h3 className="flex items-end font-bold text-xl lg:text-3xl hover:text-black cursor-pointer pl-4">
+                <span className="relative w-8 h-8 lg:w-10 lg:h-10 mr-1">
+                  <Image
+                    src="/logo-metadata.png"
+                    fill
+                    alt="logo"
+                    objectFit="contain"
+                  />
+                </span>
+                Larnova
+              </h3>
+            </Link>
+          </div>
+          <div
+            className="flex justify-end"
+            onClick={() => setShowMobileMenu(true)}
+          >
+            <div className="mr-6 cursor-pointer ">
+              <div className="w-5 h-0.5 bg-black rounded-full"></div>
+              <div className="w-3 h-0.5 bg-gray-800 mt-1 rounded-full"></div>
+              <div className="w-4 h-0.5 bg-gray-300 mt-1 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+        {showMobileMenu && (
+          <Modal
+            showMobileMenu={showMobileMenu}
+            onShowMobileMenu={setShowMobileMenu}
+          />
+        )}
+      </div>
+    </div>
+  );
+};
+
+const DesktopNav = ({
+  setActive,
+}: {
+  setActive: (href: string) => boolean;
+}) => (
+  <div className={`hidden lg:block w-full`}>
+    <div className="flex mx-auto backdrop-blur-xs bg-white text-center justify-between items-center px-4 py-3 lg:py-5 lg:px-8">
+      <Link href="/">
+        <h3 className="flex justify-center items-end font-bold text-xl lg:text-3xl hover:text-black cursor-pointer">
+          <span className="relative w-8 h-8 lg:w-10 lg:h-10 mr-1">
+            <Image
+              src="/logo-metadata.png"
+              fill
+              alt="logo"
+              objectFit="contain"
+            />
+          </span>
+          Larnova
+        </h3>
+      </Link>
+      <ul className="flex items-center gap-5 lg:text-xl">
+        {NAVIGATIONS.map((navigation, index) => (
+          <li key={index}>
+            <Link
+              href={navigation.link}
+              className={`${setActive(navigation.link) && "font-bold"}`}
+            >
+              {navigation.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+);
