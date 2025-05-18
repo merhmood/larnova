@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     title: "Larnova - Lab, STEM & Tech Services | Aura AI",
     description:
       "We’re a team of audacious visionaries—some might call us self-delusionists—on a mission to invent zero-to-one software products that will put us on the global map.",
-    images: "https://larnova.ng/images/home-bg-wb.png",
+    images:
+      "https://larnova.ng/_next/image?url=%2Fimages%2Fhome-bg-wb.png&w=640&q=75",
   },
 };
 

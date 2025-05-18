@@ -16,7 +16,8 @@ export const metadata: Metadata = {
     title: "Larnova STEM",
     description:
       "We cannot solve our problems with the same thinking we used when we created them. - Albert Einstein",
-    images: "https://larnova.ng/images/home-stem-bg.png",
+    images:
+      "https://larnova.ng/_next/image?url=%2Fimages%2Fstem-bg.png&w=640&q=75",
   },
 };
 
@@ -24,7 +25,7 @@ export default function Stem() {
   return (
     <div>
       <Navigation />
-      <section className="relative w-full  h-[calc(100vh-9vh)]">
+      <section className="relative w-full h-[calc(100vh-57px)]">
         <video
           src="/udemy-promo-video.mp4"
           autoPlay
