@@ -36,31 +36,57 @@ export default function Stem() {
         ></video>
         <div className="absolute flex flex-col justify-center pb-16 lg:pl-6 lg:pt-[calc(100vh-85vh)] top-0 h-full w-full bg-gradient-to-b lg:bg-gradient-to-l from-[#00000007] to-[#000000] lg:from-[#000000ab] lg:to-[#000000ab]">
           <h3 className="text-white text-4xl lg:text-6xl ml-4 mb-2 lg:mb-2 w-9/12 lg:w-6/12 font-bold">
-            Data Driven Decision Making with AI for SMEs
+            AI Entrepreneurship Program
           </h3>
           <p className="text-white mb-3 lg:mb-4 text-xl lg:text-2xl ml-4 w-9/12 lg:w-6/12 font-light">
-            This training is designed for small and medium-sized business owners
-            who want to make smarter, profitable, business decisions and
-            eliminate guesswork from their business strategy.{" "}
+            This training is designed for businees minded individuals who want
+            to make smarter, profitable, business decisions and eliminate
+            guesswork from their business strategy.{" "}
             <span className="font-black">Starts 6th of June 2025</span>
           </p>
           <div className="fixed lg:static bottom-7 z-20 w-full lg:w-3/12">
             <div className="w-11/12 mx-auto">
-              <Button buttonText="Get Discount" />
+              <div className="block lg:hidden">
+                <Button
+                  buttonText="Get Discount"
+                  link="mailto:contact@larnova.ng?subject=Get available Larnova STEM discount"
+                  newTab={false}
+                />
+              </div>
+              <div className="hidden lg:block">
+                <Button
+                  buttonText="Get Discount"
+                  link="/contact"
+                  newTab={false}
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="hidden lg:flex justify-end border-b border-gray-200 sticky top-[72px] bg-white z-10">
+      <section className="flex justify-center lg:justify-between items-center py-3 lg:py-0 border-b border-gray-200 sticky top-[60px] lg:top-[78px] bg-white z-10">
+        <Link href="/1-Day-Free-AI Training.pdf" download={true}>
+          <div className="flex items-center gap-3 text-lg lg:text-2xl w-fit lg:text-left lg:pl-10 lg:pr-0 pt-1 font-bold opacity-75">
+            <p>1-Day Free AI Training for Schools</p>
+            <div className="relative w-7 h-7 lg:w-9 lg:h-9">
+              <Image
+                src="/download.png"
+                alt="download"
+                fill
+                object-fit="contain"
+              />
+            </div>
+          </div>
+        </Link>
         <div className="hidden lg:block w-4/12">
-          <Link href={"#"} target={"_blank"}>
+          <Link href="/contact">
             <button className="block bg-[url('/text-bg-v2.png')] bg-cover bg-top text-white text-base lg:text-lg w-full py-4 mx-auto font-bold hover:text-white/60 cursor-pointer transition-all">
               Get Discount
             </button>
           </Link>
         </div>
       </section>
-      <section className="border-b border-gray-200 mb-16">
+      <section className="border-b border-gray-200">
         <div className="flex flex-col lg:flex-row items-end">
           <div className=" border-b lg:border-b-0 lg:border-r border-gray-200 pt-10 px-5 pb-10 lg:p-10 basis-[35%]">
             <h3 className="text-xl mb-5 opacity-70">
@@ -113,7 +139,7 @@ export default function Stem() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="sde-training" className="pt-36">
         <div className="w-11/12 mx-auto bg-gray-100 rounded-3xl p-6 lg:p-10 mb-20">
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <div className="basis-6/12">

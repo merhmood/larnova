@@ -113,9 +113,11 @@ export default function Home() {
           <p className="text-white mb-3 lg:mb-4 text-lg lg:text-xl text-center w-4/5 mx-auto lg:w-4/5 font-medium">
             A ship in harbor is safe, but that is not what ships are built for.
           </p>
-          <button className="bg-[url('/text-bg-v2.png')] bg-cover bg-top text-white text-base w-fit lg:text-lg px-6 lg:px-10 py-2 mx-auto mb-10 lg:mb-14 rounded-sm font-bold hover:text-white/60 cursor-pointer transition-all">
-            See Our Projects
-          </button>
+          <Link className="block mx-auto" href="/lab">
+            <button className="bg-[url('/text-bg-v2.png')] bg-cover bg-top text-white text-base w-fit lg:text-lg px-6 lg:px-10 py-2 mx-auto mb-10 lg:mb-14 rounded-sm font-bold hover:text-white/60 cursor-pointer transition-all">
+              See Our Projects
+            </button>
+          </Link>
         </div>
       </section>
       <section className="flex flex-col-reverse lg:flex-row lg:gap-[4.1667%] w-11/12 mx-auto mt-[calc(1/24*100%)]">
@@ -125,6 +127,7 @@ export default function Home() {
           title="AURA (AI Unified Retail Assistant)"
           description="AURA is an AI shopping assistant that uses LLM to provide personalized experience."
           buttonText="Visit Larnova Lab"
+          link="/lab"
         />
         <div className="mt-[4.1667%] lg:hidden"></div>
         <ImageWithOverlay
@@ -133,7 +136,7 @@ export default function Home() {
           title="AI for SMEs"
           description="Turn everyday business data into smart, profitable decisions using Google Sheets and ChatGPT."
           buttonText="Learn More"
-          link="https://www.udemy.com/course/google-sheets-chatgpt-for-smes-make-profitable-decisions"
+          link="/stem"
           newTab={true}
         />
       </section>
@@ -160,7 +163,7 @@ export default function Home() {
               )}
             </div>
           </div>
-          <Link href="#">
+          <Link href="https://forms.gle/1VengQkGp4zwMHNv6">
             <button className="block mt-8 lg:mt-14 bg-[url('/text-bg-v2.png')] bg-cover bg-top text-white text-base w-fit lg:text-lg px-6 lg:px-10 py-2 mx-auto mb-10 lg:mb-24 rounded-sm font-bold hover:text-white/60 cursor-pointer transition-all">
               Learn More
             </button>
@@ -172,16 +175,27 @@ export default function Home() {
           The latest from Larnova
         </h4>
         <div className="h-[calc(100vh-20vh)] md:h-[calc(100vh-30vh)] lg:h-[calc(100vh-45vh)] w-full flex flex-col lg:flex-row gap-y-20 px-4">
-          <ImageWithTitle
-            image="/images/1-day-AI-training.jpg"
-            title="1-Day Free AI Training for Schools"
-            tag="Ongoing"
-          />
-          <ImageWithTitle
-            image="/images/fullstack-developer-training.jpg"
-            title="Fullstack Developer Bootcamp with MicroManna"
-            tag="Not Started"
-          />
+          <Link
+            className="block h-200px basis-full md:basis-3/6 md:px-3 lg:px-4 "
+            href="/1-Day-Free-AI Training.pdf"
+            download={true}
+          >
+            <ImageWithTitle
+              image="/images/1-day-AI-training.jpg"
+              title="1-Day Free AI Training for Schools"
+              tag="Ongoing"
+            />
+          </Link>
+          <Link
+            className="block h-full basis-full md:basis-3/6 md:px-3 lg:px-4 "
+            href="/stem#sde-training"
+          >
+            <ImageWithTitle
+              image="/images/fullstack-developer-training.jpg"
+              title="Fullstack Developer Bootcamp with MicroManna"
+              tag="Not Started"
+            />
+          </Link>
         </div>
       </section>
       <Newsletter />
@@ -200,7 +214,7 @@ function ImageWithTitle({
   tag?: string;
 }) {
   return (
-    <div className="basis-full md:basis-3/6 md:px-3 lg:px-4 ">
+    <div className="h-full">
       <div className="relative w-full h-full overflow-hidden rounded-4xl lg:rounded-3xl">
         <NextImage src={image} alt="latest" fill objectFit="cover" />
         <span className="absolute block right-5 top-4 text-white bg-black/40 border border-white px-3 py-1.5 rounded-full text-xs">
