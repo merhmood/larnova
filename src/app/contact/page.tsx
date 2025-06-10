@@ -1,6 +1,14 @@
+import { Metadata } from "next";
+import Link from "next/link";
+
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
-import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Larnova - Contact Info",
+  description: "Contact Info of Larnova Nigeria.",
+  icons: "/logo-metadata.png",
+};
 
 export default function Contact() {
   return (

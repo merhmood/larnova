@@ -42,7 +42,6 @@ export default function Stem() {
             This training is designed for businees minded individuals who want
             to make smarter, profitable, business decisions and eliminate
             guesswork from their business strategy.{" "}
-            <span className="font-black">Starts 6th of June 2025</span>
           </p>
           <div className="fixed lg:static bottom-7 z-20 w-full lg:w-3/12">
             <div className="w-11/12 mx-auto">
@@ -139,36 +138,44 @@ export default function Stem() {
           </div>
         </div>
       </section>
-      <section id="sde-training" className="pt-36">
+      <section id="ai-mobile-app-bootcamp" className="pt-36 mb-32">
         <div className="w-11/12 mx-auto bg-gray-100 rounded-3xl p-6 lg:p-10 mb-20">
           <div className="flex flex-col lg:flex-row justify-between items-center">
             <div className="basis-6/12">
-              <h2 className="text-lg opacity-65">Become a Skilled Techy</h2>
+              <h2 className="text-lg opacity-65">
+                Become a Silicon-Valley Level Developer
+              </h2>
               <h3 className="text-2xl lg:text-4xl font-semibold mt-3 lg:mt-6">
-                Software Development Engineering Bootcamp with Micromanna
+                AI Mobile App Development Bootcamp
               </h3>
               <p className="mt-5 lg:mt-9 opacity-65">
-                Are you ready to turn your ideas into powerful applications used
-                by millions around the world.
+                Create powerful cross-platform apps with React Native using AI
+                Models: regression, random forest, and recommendation engine.
               </p>
               <p className="mt-2 lg:mt-5 opacity-65">
-                Dive into the world of software development and build the skills
-                that power today&apos;s digital world? Join our{" "}
+                In just 4 months, build React Native apps that predict, decide,
+                and recommend—using real AI/ML. Gain practical skills,
+                portfolio-ready projects, and the confidence to build
+                intelligent, high-impact mobile apps. <br />
                 <span className="font-bold">
-                  Software Development Engineering Training
+                  Note* Sessions will be recorded and available after classes
+                  and e-Certifcates will be awarded
                 </span>
-                , a hands-on, immersive experience designed to take you from
-                beginner to confident coder!
               </p>
               <p className="mt-5 opacity-65 font-bold">
-                Enroll in our 9 months training program with option for
-                pay-as-you-go payment plan*
+                Enroll in our 4-month training program.
               </p>
               <p className="mt-5 opacity-65 font-bold">
-                Location: Coming Soon!
+                Start Date: 4th August, 2025.
               </p>
-              <p className="mt-5 opacity-65 font-bold">Cost: Coming Soon!</p>
-              <Link href="/SDE-Training-Curriculum.pdf" download={true}>
+              <p className="mt-5 opacity-65 font-bold">
+                Location: Virtual (Google Meet)
+              </p>
+              <p className="mt-5 opacity-65 font-bold">Cost: N350,000</p>
+              <Link
+                href="/AI MOBILE APP BOOTCAMP CURRICULUM.pdf"
+                download={true}
+              >
                 <div className="text-lg mt-7 font-bold bg-[url('/text-bg-v2.png')] bg-right bg-cover bg-clip-text text-transparent">
                   Download Curriculum
                 </div>
@@ -183,43 +190,6 @@ export default function Stem() {
               />
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div className="w-11/12 lg:w-7/12 mx-auto text-center p-3 lg:p-10 my-32">
-          <div className="flex justify-center items-center mb-3 gap-5">
-            <div className="bg-gray-100 py-4 px-[18px] rounded-full">
-              <div className="relative w-12 h-12 mb-2">
-                <Image
-                  src="/images/exploration.png"
-                  alt="exploration"
-                  fill
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-            <div className="bg-gray-100 py-4 px-[18px] rounded-full">
-              <div className="relative w-12 h-12 mb-2">
-                <Image
-                  src="/images/analysis.png"
-                  alt="analysis"
-                  fill
-                  objectFit="contain"
-                />
-              </div>
-            </div>
-          </div>
-          <h3 className="text-2xl font-black bg-[url('/text-bg-v2.png')] bg-center bg-cover bg-clip-text text-transparent mb-5">
-            Fast Track Starting from Data Analytics to Data Science
-          </h3>
-          <p className="text-sm mb-5 w-9/12 mx-auto">
-            Start your journey from data analytics to data science in just 6
-            months. Designed for absolute beginners, this{" "}
-            <span className="font-bold">Hands-on Online Bootcamp</span> builds
-            your skills in Excel, SQL, Python, machine learning, and real-world
-            projects—preparing you for high-demand roles, job promotions, and a
-            confident leap into the data-driven workforce.
-          </p>
         </div>
       </section>
       <Newsletter />

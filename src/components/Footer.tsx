@@ -62,29 +62,21 @@ function Footer() {
           <div className="shrink-0">
             <h3 className="font-bold text-gray-900">Larnova Lab</h3>
             <p>Aura AI</p>
-            <p>Agentic AI</p>
-            <p>Generative Finetuned Models</p>
-            <p>Encoder Finetuned Models</p>
-            <p>Recommendation Engine</p>
-            <p>Anomaly Detection</p>
-            <p>Data Infrastructure</p>
+            <p>Custom Models</p>
           </div>
           <div className="shrink-0">
             <h3 className="font-bold text-gray-900">Larnova STEM</h3>
             <p>AI for SMEs</p>
-            <p>Fullstack Development</p>
-            <p>Data Science</p>
+            <p>AI Mobile App Bootcamp</p>
           </div>
           <div className="shrink-0">
             <h3 className="font-bold text-gray-900">Community</h3>
-            <p>Techies</p>
-            <p>Students</p>
-            <p>Open Source</p>
+            <p>Discord</p>
+            <p>Github</p>
           </div>
           <div className="shrink-0">
             <h3 className="font-bold text-gray-900">About Us</h3>
             <p>Careers</p>
-            <p>For Investors</p>
             <p>Legal</p>
             <Link href="/contact">
               <li>Contact</li>
