@@ -171,7 +171,7 @@ export default function Stem() {
               <p className="mt-5 opacity-65 font-bold">
                 Location: Virtual (Google Meet)
               </p>
-              <p className="mt-5 opacity-65 font-bold">Cost: N350,000</p>
+              <p className="mt-5 opacity-65 font-bold">Cost: ₦350,000</p>
               <Link
                 href="/AI MOBILE APP BOOTCAMP CURRICULUM.pdf"
                 download={true}

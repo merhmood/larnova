@@ -183,16 +183,16 @@ export default function Home() {
             <ImageWithTitle
               image="/images/1-day-AI-training.jpg"
               title="1-Day Free AI Training for Schools"
-              tag="Ongoing"
+              tag="On Hold"
             />
           </Link>
           <Link
             className="block h-full basis-full md:basis-3/6 md:px-3 lg:px-4 "
-            href="/stem#sde-training"
+            href="/stem#ai-mobile-app-bootcamp"
           >
             <ImageWithTitle
               image="/images/fullstack-developer-training.jpg"
-              title="Fullstack Developer Bootcamp with MicroManna"
+              title="Artificial Intelligence Mobile App Bootcamp"
               tag="Not Started"
             />
           </Link>
